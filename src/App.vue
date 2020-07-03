@@ -41,6 +41,40 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    color: #1E90FF;
+}
+
+.justify-content-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.justify-content-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.clearfix::after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
 #app mainContainer{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

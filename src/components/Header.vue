@@ -1,74 +1,241 @@
 <template>
-    <header class="headerContainer">
-      <el-row class="headerTop primary-bg">
-        <el-col :xs="10" :sm="10" :md="8" :lg="6" :xl="6">
-          <el-row class="social center">
-            <a>
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a>
-              <i class="fa fa-pinterest"></i>
-            </a>
-            <a>
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a>
-              <i class="fa fa-linkedin"></i>
-            </a>
+  <header>
+    <Affix>
+      <div class="headerTop primary-bg">
+        <el-row class="topContent container">
+            <el-col>
+              <el-row class="social justify-content-start">
+                <a>
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a>
+                  <i class="fa fa-pinterest"></i>
+                </a>
+                <a>
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a>
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </el-row>
+            </el-col>
+            <el-col>
+              <el-row class="languagesAndAccount justify-content-end">
+                <el-button round>ENG</el-button>
+                <el-button round>MY ACCOUNT</el-button>
+              </el-row>
+            </el-col>
           </el-row>
+      </div>
+
+      <!-- 导航区域 -->
+      <el-row class="nav container">
+        <el-col class="logo justify-content-start">
+          <img alt="Vue logo" src="../assets/images/logo.png" />
         </el-col>
-        <el-col :xs="14" :sm="14" :md="16" :lg="18" :xl="18">
-          <el-row class="languagesAndAccount center">
-            <el-button round>ENG</el-button>
-            <el-button round>MY ACCOUNT</el-button>
-          </el-row>
+        <!-- 水平菜单 -->
+        <el-col class="horizontalMenu justify-content-end">
+          <el-menu class="navMenu" mode="horizontal">
+            <el-menu-item index="1">
+              <a>HOME</a>
+            </el-menu-item>
+            <el-menu-item index="2">ABOUT US</el-menu-item>
+            <el-submenu index="3">
+              <template slot="title">SERVICES</template>
+              <el-menu-item index="3-1">SERVICES 1</el-menu-item>
+              <el-menu-item index="3-2">SERVICES 2</el-menu-item>
+              <el-menu-item index="3-3">SERVICES DETAILS</el-menu-item>
+            </el-submenu>
+            <el-submenu index="4">
+              <template slot="title">PAGES</template>
+              <el-menu-item index="4-1">DOCTORS</el-menu-item>
+              <el-menu-item index="4-2">DOCTORS DETAILS</el-menu-item>
+              <el-menu-item index="4-3">BLOG</el-menu-item>
+            </el-submenu>
+            <el-submenu index="5">
+              <template slot="title">BLOG</template>
+              <el-menu-item index="5-1">ALL BLOGS</el-menu-item>
+              <el-menu-item index="5-2">BLOGS DETAILS</el-menu-item>
+            </el-submenu>
+            <el-menu-item index="6">
+              <a href>CONTACT</a>
+            </el-menu-item>
+            <el-menu-item index="7">
+              <button class="primary-bg search" @click="handleSearch"><i class="fa fa-search white"></i></button>
+            </el-menu-item>
+          </el-menu>
+        </el-col>
+        <el-col class="verticalMenu justify-content-end">
+          <button class="" @click="handleOpen"><i class="el-icon-menu"></i></button>
         </el-col>
       </el-row>
-
-      <nav>
-        <div class="logo">
-          <img alt="Vue logo" src="../assets/images/logo.png" />
-        </div>
-        <div class="navMenu"></div>
-      </nav>
-    </header>
+      <!-- 导航区域 -->
+      
+      <!-- 垂直菜单 -->
+      <el-row>
+          <el-menu v-if="showMenu" class="navMenu" mode="vertical">
+              <el-menu-item index="1">
+                <a>HOME</a>
+              </el-menu-item>
+              <el-menu-item index="2">ABOUT US</el-menu-item>
+              <el-submenu index="3">
+                <template slot="title">SERVICES</template>
+                <el-menu-item index="3-1">SERVICES 1</el-menu-item>
+                <el-menu-item index="3-2">SERVICES 2</el-menu-item>
+                <el-menu-item index="3-3">SERVICES DETAILS</el-menu-item>
+              </el-submenu>
+              <el-submenu index="4">
+                <template slot="title">PAGES</template>
+                <el-menu-item index="4-1">DOCTORS</el-menu-item>
+                <el-menu-item index="4-2">DOCTORS DETAILS</el-menu-item>
+                <el-menu-item index="4-3">BLOG</el-menu-item>
+              </el-submenu>
+              <el-submenu index="5">
+                <template slot="title">BLOG</template>
+                <el-menu-item index="5-1">ALL BLOGS</el-menu-item>
+                <el-menu-item index="5-2">BLOGS DETAILS</el-menu-item>
+              </el-submenu>
+              <el-menu-item index="6">
+                <a href>CONTACT</a>
+              </el-menu-item>
+              <el-menu-item index="7">
+                <button class="primary-bg search" @click="handleSearch"><i class="fa fa-search white"></i></button>
+              </el-menu-item>
+            </el-menu>
+        </el-row>
+    </Affix>
+    <div v-if="showSearch">
+      <div>my name is app</div>
+    </div>
+  </header>
 </template>
 
 <script>
-export default {};
+import Affix from './Affix'
+
+export default {
+  data() {
+    return {
+      showSearch: false,
+      showMenu: false
+    }
+  },
+  methods: {
+    handleOpen() {
+      this.showMenu = !this.showMenu
+    },
+    handleSearch() {
+      this.showSearch = !this.showSearch
+    }
+  },
+  components: {
+    Affix
+  }
+};
 </script>
 
 <style>
-.primary-bg {
-  background: #00C9B7;
+.topContent {
+  display: flex;
+  flex-flow: row;
 }
+
+@media screen and (min-width: 575px) {
+  .verticalMenu.justify-content-end {
+    display: none
+  }
+}
+
+@media (max-width: 575px) {
+
+  .horizontalMenu.justify-content-end {
+    display: none
+  }
+
+  .topContent {
+    flex-flow: column;
+  }
+
+  .topContent .social {
+    justify-content: center;
+  }
+
+  .topContent .languagesAndAccount {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.verticalMenu .el-icon-menu {
+  font-size: 3rem
+}
+
 .headerTop {
   padding: 20px 0;
 }
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.languagesAndAccount {
+  flex-flow: wrap;
 }
+
 .social a {
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: #00C9B7;
-    background: #ffffff;
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 5px;
-    cursor: pointer;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #00c9b7;
+  background: #ffffff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
 }
+
 .languagesAndAccount button {
   border-radius: 50px;
-  background:#00C9B7;
-  color:#ffffff
+  background: #00c9b7;
+  color: #ffffff;
 }
-.languagesAndAccount button:hover{
-    background: #ffffff;
-    color: #292929;
+
+.languagesAndAccount button:hover {
+  background: #ffffff;
+  color: #292929;
 }
+
+.nav {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.nav .logo {
+  flex: 1;
+}
+
+.navMenu.el-menu.el-menu--horizontal {
+  border: none;
+}
+
+.navMenu.el-menu--horizontal>.el-menu-item.is-active {
+  border: none
+}
+
+.navMenu .search {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  border: none;
+}
+
+.navMenu .white {
+  color: #fff;
+  cursor: pointer;
+}
+
+.navMenu .search:focus {
+  outline: none;
+}
+
 </style>
