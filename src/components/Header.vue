@@ -39,23 +39,23 @@
             <el-menu-item index="1">
               <a>HOME</a>
             </el-menu-item>
-            <el-menu-item index="2">ABOUT US</el-menu-item>
+            <el-menu-item index="2"><a>ABOUT US</a></el-menu-item>
             <el-submenu index="3">
               <template slot="title">SERVICES</template>
-              <el-menu-item index="3-1">SERVICES 1</el-menu-item>
-              <el-menu-item index="3-2">SERVICES 2</el-menu-item>
-              <el-menu-item index="3-3">SERVICES DETAILS</el-menu-item>
+              <el-menu-item index="3-1"><a>SERVICES 1</a></el-menu-item>
+              <el-menu-item index="3-2"><a>SERVICES 2</a></el-menu-item>
+              <el-menu-item index="3-3"><a>SERVICES DETAILS</a></el-menu-item>
             </el-submenu>
             <el-submenu index="4">
               <template slot="title">PAGES</template>
-              <el-menu-item index="4-1">DOCTORS</el-menu-item>
-              <el-menu-item index="4-2">DOCTORS DETAILS</el-menu-item>
-              <el-menu-item index="4-3">BLOG</el-menu-item>
+              <el-menu-item index="4-1"><a>DOCTORS</a></el-menu-item>
+              <el-menu-item index="4-2"><a>DOCTORS DETAILS</a></el-menu-item>
+              <el-menu-item index="4-3"><a>BLOG</a></el-menu-item>
             </el-submenu>
             <el-submenu index="5">
               <template slot="title">BLOG</template>
-              <el-menu-item index="5-1">ALL BLOGS</el-menu-item>
-              <el-menu-item index="5-2">BLOGS DETAILS</el-menu-item>
+              <el-menu-item index="5-1"><a>BLOGS</a></el-menu-item>
+              <el-menu-item index="5-2"><a>BLOGS DETAILS</a></el-menu-item>
             </el-submenu>
             <el-menu-item index="6">
               <a href>CONTACT</a>
@@ -104,9 +104,6 @@
             </el-menu>
         </el-row>
     </Affix>
-    <div v-if="showSearch">
-      <div>my name is app</div>
-    </div>
   </header>
 </template>
 
@@ -125,7 +122,15 @@ export default {
       this.showMenu = !this.showMenu
     },
     handleSearch() {
-      this.showSearch = !this.showSearch
+      this.$prompt(null, null, {
+          confirmButtonText: '搜索',
+          cancelButtonText: '取消',
+        }).then(({ value }) => {
+          this.$message({
+            type: 'success',
+            message: '你的搜索内容: ' + value
+          });
+        })
     }
   },
   components: {
@@ -213,6 +218,7 @@ export default {
 
 .navMenu.el-menu.el-menu--horizontal {
   border: none;
+  background: none;
 }
 
 .navMenu.el-menu--horizontal>.el-menu-item.is-active {
