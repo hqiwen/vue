@@ -18,10 +18,9 @@ function isInViewPortOfOne(el) {
     window.innerHeight ||
     document.documentElement.clientHeight ||
     document.body.clientHeight;
-  const offsetTop = el.offsetTop;
-  const scrollTop = document.documentElement.scrollTop;
-  const top = offsetTop - scrollTop;
-  return top <= viewPortHeight;
+  const top = el.getBoundingClientRect() && el.getBoundingClientRect().top;
+  // 让可视元素高于底部200px
+  return top <= viewPortHeight - 200;
 }
 
 export default {
@@ -68,6 +67,7 @@ export default {
         return;
       } else {
         if (isInViewPortOfOne(this.$el)) {
+          console.log("move");
           this.step();
           this.once = true;
         }
