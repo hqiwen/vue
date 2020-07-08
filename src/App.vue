@@ -177,19 +177,19 @@
           <div class="doctor-header section-header mb-30 mt-30">
             <h2 class="doctor-title section-title mb-30">Our Expert Doctor</h2>
             <p
-              class="doctor-content"
+              class="doctor-content pb-100"
             >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada</p>
           </div>
 
           <div class="doctor-info">
-            <el-card class="single-doctor-info">
+            <el-card class="single-doctor-info pt-100">
               <div class="info-img">
-                // todo: 图片位置的调整
                 <img src="./assets/images/1.png" alt />
               </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
+              <h3 class="info-title mb-5">Dr. Khaled Hossen</h3>
+              <p class="mb-30">Physical Medicine, MBBS</p>
               <p
-                class="info-content"
+                class="info-content mb-30"
               >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
               <div class="team-social">
                 <a href class="facebook-bg">
@@ -204,7 +204,7 @@
               </div>
             </el-card>
 
-            <el-card class="single-doctor-info">
+            <el-card class="single-doctor-info pt-100">
               <div class="info-img">
                 <img src="./assets/images/2.png" alt />
               </div>
@@ -227,7 +227,7 @@
               </div>
             </el-card>
 
-            <el-card class="single-doctor-info">
+            <el-card class="single-doctor-info pt-100">
               <div class="info-img">
                 <img src="./assets/images/3.png" alt />
               </div>
@@ -253,6 +253,59 @@
         </div>
       </div>
 
+      <div class="counter-area gray-bg section-area">
+        <div class="container">
+          <div class="all-counters">
+            <div class="single-counter">
+              <h3 class="count blue-bg" @click="showTotalStuff">
+                <Tween :changeValue="totalStuff" />
+              </h3>
+              <h5>Total Stuff</h5>
+            </div>
+            <div class="single-counter">
+              <h3 class="count blue-bg">
+                <Tween :changeValue="1576" />
+              </h3>
+              <h5>Total Stuff</h5>
+            </div>
+            <div class="single-counter">
+              <h3 class="count blue-bg">
+                <Tween :changeValue="2946" />
+              </h3>
+              <h5>Total Stuff</h5>
+            </div>
+            <div class="single-counter">
+              <h3 class="count blue-bg">
+                <Tween :changeValue="312" />
+              </h3>
+              <h5>Total Stuff</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="department-area">
+        <div class="container">
+          <div class>
+            <h2>Our Departments is best for you</h2>
+            <p>Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
+          </div>
+          <div class="all-departments">
+            <el-tabs type="border-card">
+              <el-tab-pane>
+                <span slot="label">
+                  <i class="el-icon-date"></i> 我的行程
+                </span>
+                我的行程
+              </el-tab-pane>
+              <el-tab-pane label="消息中心">消息中心</el-tab-pane>
+              <el-tab-pane label="角色管理">角色管理</el-tab-pane>
+              <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
+            </el-tabs>
+          </div>
+        </div>
+      </div>
+
       <content class="mainContainer">
         <img alt="Vue logo" src="./assets/logo.png" />
         <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -267,6 +320,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import Button from "./components/Button";
 import Header from "./components/Header.vue";
+import Tween from "./components/Tween";
 
 export default {
   name: "App",
@@ -281,17 +335,25 @@ export default {
       },
       rules: {
         phone: [{ min: 12, max: 12, message: "长度12 个字符", trigger: "blur" }]
-      }
+      },
+      totalStuff: 589
     };
   },
   components: {
     HelloWorld,
     Header,
-    Button
+    Button,
+    Tween
   },
   methods: {
     onSubmit() {
       console.log("submit");
+    },
+    showTotalStuff() {
+      this.$message({
+        type: "success",
+        message: "你的点击内容: " + this.totalStuff
+      });
     }
   }
 };
@@ -351,6 +413,9 @@ a {
 .gray-bg {
   background: #f9f9f9;
 }
+.blue-bg {
+  background: #15124b;
+}
 
 .btn--mid {
   position: relative;
@@ -387,6 +452,14 @@ a {
 
 .pb-70 {
   padding-bottom: 70px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
 }
 
 .relative {
@@ -484,6 +557,7 @@ p {
 
 .section-area {
   text-align: center;
+  padding: 100px 0;
 }
 
 @media (max-width: 575px) {
@@ -541,6 +615,7 @@ p {
 .doctor-info .single-doctor-info {
   width: 30%;
   margin: 15px;
+  overflow: visible;
 }
 
 .single-doctor-info {
@@ -550,7 +625,40 @@ p {
 .single-doctor-info .info-img {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
-  top: -50%;
+  transform: translate(-50%, -50%);
+  top: 0;
+}
+
+.single-doctor-info .team-social a {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 2px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: inline-block;
+  background: #3b5999;
+}
+
+.counter-area .all-counters {
+  display: flex;
+}
+
+.all-counters .single-counter {
+  width: 25%;
+}
+
+.counter-area .count {
+  height: 125px;
+  width: 150px;
+  line-height: 125px;
+  margin: auto;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 </style>

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open --port=10080",
+    "serve": "vue-cli-service serve --open --remote-debugging-port=9222",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -37,7 +37,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "off"
+    }
   },
   "browserslist": [
     "> 1%",
