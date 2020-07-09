@@ -174,7 +174,7 @@
 
       <div class="expert-doctor section-area">
         <div class="container">
-          <div class="doctor-header section-header mb-30 mt-30">
+          <div class="doctor-header mb-30 mt-30">
             <h2 class="doctor-title section-title mb-30">Our Expert Doctor</h2>
             <p
               class="doctor-content pb-100"
@@ -258,7 +258,7 @@
           <div class="all-counters">
             <div class="single-counter">
               <h3 class="count blue-bg" @click="showTotalStuff">
-                <Tween :changeValue="totalStuff" />
+                <Tween :changeValue="totalStuff" :duration="20" />
               </h3>
               <h5>Total Stuff</h5>
             </div>
@@ -284,31 +284,75 @@
         </div>
       </div>
 
-      <div class="department-area">
+      <div class="department-area section-area">
         <div class="container">
-          <div class>
-            <h2>Our Departments is best for you</h2>
-            <p>Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
+          <div class="department-header mb-30 mt-30">
+            <h2 class="header-title section-title mb-30">Our Departments is best for you</h2>
+            <p
+              class="header-content"
+            >Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
           </div>
-          <div class="all-departments">
-            <el-tabs type="border-card">
-              <el-tab-pane>
-                <span slot="label">
-                  <i class="el-icon-date"></i> 我的行程
-                </span>
-                我的行程
-              </el-tab-pane>
-              <el-tab-pane label="消息中心">消息中心</el-tab-pane>
-              <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-              <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-            </el-tabs>
-          </div>
+          <Tabs v-model="value">
+            <Tab label="dental" icon="fa fa-facebook" name="1">
+              <div>
+                <img src="./assets/images/dept_1.jpg" />
+              </div>
+              <div class="department-description">
+                <h3 class="mb-30">Dental surgery</h3>
+                <p
+                  class="mb-30"
+                >Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna vicras. Ipsum sociosqu. Mi consequat nec, per urna sed vitae mi lectusn egestas, in consectetuer sed. Nunc id venenatis</p>
+                <ul>
+                  <li
+                    class="department-list-item"
+                  >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                  <li
+                    class="department-list-item"
+                  >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                  <li
+                    class="department-list-item"
+                  >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                  <li
+                    class="department-list-item"
+                  >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                </ul>
+              </div>
+            </Tab>
+            <Tab label="emergency" name="2">标签二内容</Tab>
+            <Tab label="Lab" name="3">标签三内容</Tab>
+            <Tab label="dental" name="4">
+              <div>
+                <img src="./assets/images/dept_1.jpg" />
+              </div>
+              <div>
+                <h3>Dental surgery</h3>
+                <p>Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna vicras. Ipsum sociosqu. Mi consequat nec, per urna sed vitae mi lectusn egestas, in consectetuer sed. Nunc id venenatis</p>
+              </div>
+            </Tab>
+            <Tab label="emergency" name="5">
+              <div>
+                <img src="./assets/images/dept_1.jpg" />
+              </div>
+              <div>
+                <h3>Dental surgery</h3>
+                <p>Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna vicras. Ipsum sociosqu. Mi consequat nec, per urna sed vitae mi lectusn egestas, in consectetuer sed. Nunc id venenatis</p>
+              </div>
+            </Tab>
+            <Tab label="Lab" name="6">
+              <div>
+                <img src="./assets/images/dept_1.jpg" />
+              </div>
+              <div>
+                <h3>Dental surgery</h3>
+                <p>Ridiculus elit amet sagittis arcu cras ornare, amet a amet urna vicras. Ipsum sociosqu. Mi consequat nec, per urna sed vitae mi lectusn egestas, in consectetuer sed. Nunc id venenatis</p>
+              </div>
+            </Tab>
+          </Tabs>
         </div>
       </div>
 
       <content class="mainContainer">
         <img alt="Vue logo" src="./assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
       </content>
     </main>
 
@@ -317,9 +361,10 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Button from "./components/Button";
 import Header from "./components/Header.vue";
+import Tab from "./components/Tab";
+import Tabs from "./components/Tabs";
 import Tween from "./components/Tween";
 
 export default {
@@ -336,14 +381,16 @@ export default {
       rules: {
         phone: [{ min: 12, max: 12, message: "长度12 个字符", trigger: "blur" }]
       },
-      totalStuff: 589
+      totalStuff: 589,
+      value: "1"
     };
   },
   components: {
-    HelloWorld,
     Header,
     Button,
-    Tween
+    Tween,
+    Tabs,
+    Tab
   },
   methods: {
     onSubmit() {
@@ -485,9 +532,17 @@ h2 {
   font-size: 40px;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 p {
   line-height: 1.6em;
   font-family: "Open Sans", sans-serif;
+}
+
+ul li {
+  list-style: none;
 }
 
 .clearfix::after {
@@ -495,15 +550,6 @@ p {
   display: block;
   height: 0;
   clear: both;
-}
-
-#app mainContainer {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 
 .single-hero {
@@ -660,5 +706,33 @@ p {
   margin-bottom: 20px;
   color: #ffffff;
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+
+.department-header {
+  display: flex;
+  align-items: center;
+}
+
+.department-header .header-title {
+  border-right: 5px solid #00c9b7;
+  padding-right: 10px;
+  flex: 2;
+}
+
+.department-header .header-content {
+  flex: 3;
+  padding: 10px;
+}
+
+.department-description {
+  text-align: left;
+  padding: 0 50px;
+}
+
+.department-list-item::before {
+  content: "\f00c";
+  font-family: Fontawesome;
+  color: #00c9b7;
+  margin-right: 5px;
 }
 </style>
