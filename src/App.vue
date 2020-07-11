@@ -6,14 +6,14 @@
       <div class="single-hero">
         <div class="container relative">
           <el-row class="pb-70">
-            <el-col :span="14">
+            <el-col>
               <h1 class="hero title mb-30">Meet with you best Doctor here</h1>
               <p
                 class="hero description mb-30"
               >Ridiculus elit amet sagittis arcu cras ornare, amet a ameturna, vitae cras. Ipsum sociosqu.</p>
               <div class="hero operation">
                 <Button class="mr-20">Appointment</Button>
-                <Button color="white">LEARN MORE</Button>
+                <Button white>LEARN MORE</Button>
               </div>
             </el-col>
           </el-row>
@@ -52,10 +52,10 @@
       <div class="book-appointment">
         <div class="container">
           <el-row style="display: flex; align-items:center; padding-top: 70px;">
-            <el-col :offset="1" :span="12" class="book-img">
+            <el-col class="book-img">
               <img src="./assets/images/doctor.png" />
             </el-col>
-            <el-col :offset="2" :span="8">
+            <el-col>
               <el-card class="book-card">
                 <div slot="header" class="clearfix">
                   <h2>Book Appointment</h2>
@@ -174,7 +174,7 @@
 
       <div class="expert-doctor section-area">
         <div class="container">
-          <div class="doctor-header mb-30 mt-30">
+          <div class="section-header mb-30 mt-30">
             <h2 class="doctor-title section-title mb-30">Our Expert Doctor</h2>
             <p
               class="doctor-content pb-100"
@@ -287,7 +287,7 @@
       <div class="department-area section-area">
         <div class="container">
           <div class="department-header mb-30 mt-30">
-            <h2 class="header-title section-title mb-30">Our Departments is best for you</h2>
+            <h2 class="header-title mb-30">Our Departments is best for you</h2>
             <p
               class="header-content"
             >Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
@@ -351,12 +351,193 @@
         </div>
       </div>
 
-      <content class="mainContainer">
-        <img alt="Vue logo" src="./assets/logo.png" />
-      </content>
+      <div class="call-to-action primary-bg section-area">
+        <div class="container clearfix">
+          <div class="action-description">
+            <h3 class="mb-30">30% off any diganestic let's check</h3>
+            <p>You can get upto 30% off for 45 days in here ! So Contact with Us</p>
+          </div>
+          <div class="action-btn">
+            <Button class="get-service-btn" white>GET SERVICE</Button>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-testimonial section-area">
+        <div class="container">
+          <div class="section-header mb-30 mt-30">
+            <h2 class="header-title section-title mb-30">client testimonial</h2>
+            <p
+              class="header-content"
+            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
+          </div>
+          <div class>
+            <el-carousel
+              trigger="click"
+              height="150px"
+              indicator-position="none"
+              arrow="never"
+              :autoplay="false"
+            >
+              <el-carousel-item>
+                <el-card>
+                  <div
+                    class
+                  >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                  <div class="name">
+                    <div></div>
+                    <div>
+                      <h3>Mario Speedwage</h3>
+                      <span>bussinessman</span>
+                    </div>
+                  </div>
+                </el-card>
+              </el-carousel-item>
+              <el-carousel-item>
+                <el-card>
+                  <div
+                    class
+                  >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                  <div class="name">
+                    <div></div>
+                    <div>
+                      <h3>Mario Speedwage</h3>
+                      <span>bussinessman</span>
+                    </div>
+                  </div>
+                </el-card>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-area section-area">
+        <div class="container">
+          <div class="section-header mb-30 mt-30">
+            <h2 class="header-title section-title mb-30">Latest Update</h2>
+            <p
+              class="header-content"
+            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
+          </div>
+          <div class="blog-area cards">
+            <el-card class="blog-area card-item">
+              <div class="card-img mb-30">
+                <img src="./assets/images/1.jpg" />
+                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+              </div>
+              <div class="card-author">
+                <span>By Admin</span>
+                <span>Doctor, Clinic</span>
+              </div>
+              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
+              <p
+                class="mb-30"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+              <Button white>READ MORE</Button>
+            </el-card>
+            <el-card class="blog-area card-item">
+              <div class="card-img mb-30">
+                <img src="./assets/images/1.jpg" />
+                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+              </div>
+              <div class="card-author">
+                <span>By Admin</span>
+                <span>Doctor, Clinic</span>
+              </div>
+              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
+              <p
+                class="mb-30"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+              <Button white>READ MORE</Button>
+            </el-card>
+            <el-card class="blog-area card-item">
+              <div class="card-img mb-30">
+                <img src="./assets/images/1.jpg" />
+                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+              </div>
+              <div class="card-author">
+                <span>By Admin</span>
+                <span>Doctor, Clinic</span>
+              </div>
+              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
+              <p
+                class="mb-30"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+              <Button white>READ MORE</Button>
+            </el-card>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer-area">
+      <div class="container">
+        <div class="footer-top primary-bg">
+          <img src="./assets/images/1 (1).png" />
+          <img src="./assets/images/2 (1).png" />
+          <img src="./assets/images/1 (1).png" />
+          <img src="./assets/images/2 (1).png" />
+          <img src="./assets/images/1 (1).png" />
+        </div>
+      </div>
+
+      <div class="footer-link">
+        <div class="container justify-content-start">
+          <div class="acout-company">
+            <h3>acout-company</h3>
+            <p>Penatibus in, litora dictumst suspendamuanim egestas, libero mollis molestiae sit et sem nisl inquam vitae euismoellentesque. Iaculpellus est officia. Non sed id mollis molestie ut ut mi qelibero donec and this is over head</p>
+          </div>
+          <div class="useful-link">
+            <h3>useful-link</h3>
+            <ul>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Our Services</a>
+              </li>
+              <li>
+                <a>Compoany Mission</a>
+              </li>
+              <li>
+                <a>Find Doctor</a>
+              </li>
+            </ul>
+          </div>
+          <div class="our-services">
+            <h3>our-services</h3>
+            <ul>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Our Services</a>
+              </li>
+              <li>
+                <a>Compoany Mission</a>
+              </li>
+              <li>
+                <a>Find Doctor</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-us">
+            <h3>contact-us</h3>
+            <el-form>
+              <div class="input-all">
+                <input name="name" placeholder="name" />
+                <input name="email" placeholder="email" />
+              </div>
+              <textarea placeholder="write message" />
+              <button class="send-message btn--fill btn--mid">send messages</button>
+            </el-form>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">Copyright © 2019 All Rights Reserved.</div>
+    </footer>
   </div>
 </template>
 
@@ -567,10 +748,6 @@ ul li {
   color: #555555;
 }
 
-.hero-widgets {
-  display: flex;
-}
-
 .hero-widgets .card {
   /** */
   display: flex;
@@ -580,7 +757,8 @@ ul li {
 }
 
 .hero-widgets {
-  width: 100%;
+  display: flex;
+  width: 80%;
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -606,24 +784,29 @@ ul li {
   padding: 100px 0;
 }
 
-@media (max-width: 575px) {
-  .service-info .single-service-info {
-    width: 50%;
-  }
-}
-
 .section-header {
   width: 60%;
   margin: 0 auto;
 }
 
+h2.section-title:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -20px;
+  width: 40px;
+  height: 4px;
+  background: #00c9b7;
+}
+
+/* service 区域开始 */
 .service-info {
   display: flex;
   flex-flow: wrap;
 }
 
 .service-info .single-service-info {
-  width: 30%;
   margin: 15px;
 }
 
@@ -653,13 +836,13 @@ ul li {
   background: #00c9b7;
 }
 
+/* doctor 区域开始 */
 .doctor-info {
   display: flex;
   flex-flow: wrap;
 }
 
 .doctor-info .single-doctor-info {
-  width: 30%;
   margin: 15px;
   overflow: visible;
 }
@@ -688,12 +871,13 @@ ul li {
   background: #3b5999;
 }
 
+/* counter区域 */
 .counter-area .all-counters {
   display: flex;
 }
 
 .all-counters .single-counter {
-  width: 25%;
+  flex: 1;
 }
 
 .counter-area .count {
@@ -708,6 +892,7 @@ ul li {
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 
+/* department 区域开始 */
 .department-header {
   display: flex;
   align-items: center;
@@ -734,5 +919,165 @@ ul li {
   font-family: Fontawesome;
   color: #00c9b7;
   margin-right: 5px;
+}
+
+/* call-to-action 区域 */
+.action-description {
+  color: #fff;
+}
+
+/* blog 区域开始 */
+.blog-area.cards {
+  display: flex;
+}
+
+.blog-area.card-item {
+  margin: 0 15px;
+}
+
+.blog-area .card-item .el-card__body {
+  padding: 0;
+  padding-bottom: 50px;
+}
+
+.blog-area .card-item .card-img {
+  position: relative;
+}
+
+.card-item img {
+  display: block;
+  width: 100%;
+  transition: 0.4;
+}
+.card-item img:hover {
+  opacity: 0.7;
+}
+.card-item .card-author {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.card-item .card-btn--date {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, 50%);
+}
+
+.footer-top {
+  position: relative;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.footer-top::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform: translate(-100%);
+  border-color: transparent #04b4a4;
+  border-width: 94px 40px 0 0;
+  border-style: solid;
+}
+.footer-top img {
+  margin: 0 30px;
+}
+
+.footer-link {
+  background: #262229;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-link h3 {
+  margin-bottom: 30px;
+}
+
+.footer-link h3::after {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  height: 4px;
+  width: 40px;
+  content: "";
+  background: #00c9b7;
+}
+
+.footer-link .justify-content-start {
+  align-items: flex-start;
+}
+
+.footer-link .container div {
+  margin-right: 10px;
+}
+
+.acout-company {
+  flex: 2;
+}
+
+.useful-link {
+  flex: 1;
+}
+
+.contact-us {
+  flex: 2;
+}
+
+.footer-link.container h3 {
+  margin-bottom: 30px;
+}
+
+.footer-link.container div {
+  margin: 0 5px;
+}
+
+.footer-link li::before {
+  content: "\f101";
+  left: 0;
+  top: 0;
+  font-family: Fontawesome;
+  margin-right: 5px;
+}
+
+.contact-us .input-all {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-us input {
+  width: 100%;
+  background: #3d3c3e;
+  height: 50px;
+  text-indent: 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border: none;
+}
+
+.contact-us .send-message {
+  width: 100%;
+  border-radius: 0;
+}
+
+.contact-us textarea {
+  width: 100%;
+  height: 70px;
+  background: #3d3c3e;
+  text-indent: 15px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.footer-area .copyright {
+  text-align: center;
 }
 </style>

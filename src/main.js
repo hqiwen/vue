@@ -1,6 +1,8 @@
 import {
   Button,
   Card,
+  Carousel,
+  CarouselItem,
   Col,
   DatePicker,
   Form,
@@ -13,8 +15,6 @@ import {
   Row,
   Select,
   Submenu,
-  TabPane,
-  Tabs,
 } from "element-ui";
 import "element-ui/lib/theme-chalk/display.css";
 import "element-ui/lib/theme-chalk/index.css";
@@ -35,8 +35,8 @@ Vue.use(Form);
 Vue.use(FormItem);
 Vue.use(Input);
 Vue.use(DatePicker);
-Vue.use(Tabs);
-Vue.use(TabPane);
+Vue.use(Carousel);
+Vue.use(CarouselItem);
 
 Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$message = MessageBox;
