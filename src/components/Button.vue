@@ -1,5 +1,5 @@
 <template>
-  <a class="btn-fill" :class="white ? 'white' : null">
+  <a class="btn-fill" :class="checkClass(white, hover)">
     <slot></slot>
   </a>
 </template>
@@ -9,6 +9,18 @@ export default {
   props: {
     white: {
       type: Boolean
+    },
+    hover: {
+      type: Boolean,
+      default: true
+    }
+  },
+  methods: {
+    checkClass(white, hover) {
+      let cls = "";
+      !hover && (cls += " disable-hover");
+      white && (cls += " white");
+      return cls;
     }
   }
 };
@@ -20,9 +32,7 @@ a {
   padding: 14px 45px;
   display: inline-block;
   border-radius: 50px;
-  cursor: pointer;
   text-transform: uppercase;
-  transition: 0.4s;
 }
 
 a.btn-fill {
@@ -30,7 +40,7 @@ a.btn-fill {
   color: #fff;
 }
 
-a.btn-fill:hover {
+a.btn-fill:not(.disable-hover):hover {
   background: #fff;
   color: #00c9b7;
 }
@@ -38,6 +48,7 @@ a.btn-fill:hover {
 a.btn-fill.white {
   background: #fff;
   color: #00c9b7;
+  border: 2px solid #00c9b7;
 }
 
 a.btn-fill.white:hover {
