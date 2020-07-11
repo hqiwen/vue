@@ -27,32 +27,36 @@ export default {
 </script>
 <style scoped>
 a {
+  display: inline-block;
+
+  padding: 14px 45px;
+
+  text-transform: uppercase;
+
+  border-radius: 50px;
+
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 45px;
-  display: inline-block;
-  border-radius: 50px;
-  text-transform: uppercase;
 }
 
 a.btn-fill {
-  background: #00c9b7;
   color: #fff;
+  background: #00c9b7;
 }
 
 a.btn-fill:not(.disable-hover):hover {
-  background: #fff;
   color: #00c9b7;
+  background: #fff;
 }
 
 a.btn-fill.white {
-  background: #fff;
   color: #00c9b7;
   border: 2px solid #00c9b7;
+  background: #fff;
 }
 
 a.btn-fill.white:hover {
-  background: #00c9b7;
   color: #fff;
+  background: #00c9b7;
 }
 </style>

@@ -190,6 +190,7 @@ export default {
 
   .topContent .languagesAndAccount {
     justify-content: center;
+
     margin-top: 10px;
   }
 }
@@ -207,31 +208,36 @@ export default {
 }
 
 .social a {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #00c9b7;
-  background: #ffffff;
   display: inline-block;
-  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
   margin-right: 5px;
+
   cursor: pointer;
+  text-align: center;
+
+  color: #00c9b7;
+  border-radius: 50%;
+  background: #ffffff;
+
+  line-height: 40px;
 }
 
 .languagesAndAccount button {
+  color: #ffffff;
   border-radius: 50px;
   background: #00c9b7;
-  color: #ffffff;
 }
 
 .languagesAndAccount button:hover {
-  background: #ffffff;
   color: #292929;
+  background: #ffffff;
 }
 
 .nav {
   display: flex;
+
   padding: 0.5rem 0;
 }
 
@@ -249,18 +255,23 @@ export default {
 }
 
 .navMenu .search {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  text-align: center;
   display: inline-block;
-  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+
   border: none;
+  border-radius: 50%;
+
+  line-height: 40px;
 }
 
 .navMenu .white {
-  color: #fff;
   cursor: pointer;
+
+  color: #fff;
 }
 
 .navMenu .search:focus {

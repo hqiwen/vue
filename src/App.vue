@@ -525,27 +525,30 @@ export default {
 
 <style>
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   border: none;
   outline: none;
 }
 
 body {
-  font-size: 16px;
   color: #292929;
-  line-height: 1.7em;
-  font-weight: 400;
   background: #ffffff;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7em;
+
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-family: "Open Sans", sans-serif;
 }
 
 a {
-  text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .justify-content-start {
@@ -561,11 +564,11 @@ a {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .primary-bg {
@@ -583,14 +586,19 @@ a {
 
 .btn--mid {
   position: relative;
+
+  display: inline-block;
+
+  padding: 14px 45px;
+
+  cursor: pointer;
+  transition: 0.4s;
+  text-transform: uppercase;
+
+  border-radius: 50px;
+
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 45px;
-  display: inline-block;
-  border-radius: 50px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: 0.4s;
 }
 
 .btn--fill {
@@ -637,15 +645,19 @@ h4,
 h5,
 h6 {
   position: relative;
-  font-weight: 700;
+
   margin: 0px;
+
   background: none;
-  line-height: 1.2em;
+
   font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 1.2em;
 }
 
 h2 {
   color: #292929;
+
   font-size: 40px;
 }
 
@@ -654,8 +666,8 @@ h3 {
 }
 
 p {
-  line-height: 1.6em;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
 }
 
 ul li {
@@ -663,10 +675,12 @@ ul li {
 }
 
 .clearfix::after {
-  content: "\20";
   display: block;
-  height: 0;
   clear: both;
+
+  height: 0;
+
+  content: "\20";
 }
 
 .single-hero {
@@ -679,27 +693,33 @@ ul li {
 }
 
 .hero.description {
+  color: #555555;
+
   font-size: 18px;
   font-weight: 600;
-  color: #555555;
 }
 
 .hero-widgets .card {
   /** */
   display: flex;
+
   padding: 40px;
   padding-right: 0;
+
   color: #ffffff;
 }
 
 .hero-widgets {
-  display: flex;
-  width: 80%;
   position: absolute;
-  left: 50%;
   bottom: 0;
-  transform: translate(-50%, 50%);
+  left: 50%;
+
+  display: flex;
+
+  width: 80%;
   padding: 0 15px;
+
+  transform: translate(-50%, 50%);
 }
 
 .widgets-icon {
@@ -708,6 +728,7 @@ ul li {
 
 .book-card h2 {
   text-align: center;
+
   font-size: 40px;
 }
 
@@ -716,8 +737,9 @@ ul li {
 }
 
 .section-area {
-  text-align: center;
   padding: 100px 0;
+
+  text-align: center;
 }
 
 .section-header {
@@ -727,12 +749,15 @@ ul li {
 
 h2.section-title:after {
   position: absolute;
-  content: "";
-  left: 50%;
-  transform: translate(-50%, 0);
   bottom: -20px;
+  left: 50%;
+
   width: 40px;
   height: 4px;
+
+  content: "";
+  transform: translate(-50%, 0);
+
   background: #00c9b7;
 }
 
@@ -751,25 +776,30 @@ h2.section-title:after {
 }
 
 .service-info .info-icon {
-  height: 70px;
   width: 70px;
-  line-height: 70px;
+  height: 70px;
   margin: 20px auto;
+
   border-radius: 50%;
   background: #90e7e0;
+
+  line-height: 70px;
 }
 
 .service-info i {
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 28px;
   display: inline-block;
+
+  width: 60px;
+  height: 60px;
   margin: auto;
   margin-top: 5px;
+
+  color: #fff;
+  border-radius: 50%;
   background: #00c9b7;
+
+  font-size: 28px;
+  line-height: 60px;
 }
 
 /* doctor 区域开始 */
@@ -779,8 +809,9 @@ h2.section-title:after {
 }
 
 .doctor-info .single-doctor-info {
-  margin: 15px;
   overflow: visible;
+
+  margin: 15px;
 }
 
 .single-doctor-info {
@@ -789,22 +820,27 @@ h2.section-title:after {
 
 .single-doctor-info .info-img {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
   top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .single-doctor-info .team-social a {
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  text-align: center;
-  color: #ffffff;
-  margin: 0 2px;
-  border-radius: 50%;
-  font-size: 14px;
   display: inline-block;
+
+  width: 35px;
+  height: 35px;
+  margin: 0 2px;
+
+  text-align: center;
+
+  color: #ffffff;
+  border-radius: 50%;
   background: #3b5999;
+
+  font-size: 14px;
+  line-height: 35px;
 }
 
 /* counter区域 */
@@ -817,14 +853,17 @@ h2.section-title:after {
 }
 
 .counter-area .count {
-  height: 125px;
   width: 150px;
-  line-height: 125px;
+  height: 125px;
   margin: auto;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: #ffffff;
+  line-height: 125px;
+
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 
@@ -835,26 +874,33 @@ h2.section-title:after {
 }
 
 .department-header .header-title {
-  border-right: 5px solid #00c9b7;
-  padding-right: 10px;
   flex: 2;
+
+  padding-right: 10px;
+
+  border-right: 5px solid #00c9b7;
 }
 
 .department-header .header-content {
   flex: 3;
+
   padding: 10px;
 }
 
 .department-description {
-  text-align: left;
   padding: 0 50px;
+
+  text-align: left;
 }
 
 .department-list-item::before {
-  content: "\f00c";
-  font-family: Fontawesome;
-  color: #00c9b7;
   margin-right: 5px;
+
+  content: "\f00c";
+
+  color: #00c9b7;
+
+  font-family: Fontawesome;
 }
 
 /* call-to-action 区域 */
@@ -882,7 +928,9 @@ h2.section-title:after {
 
 .card-item img {
   display: block;
+
   width: 100%;
+
   transition: 0.4;
 }
 .card-item img:hover {
@@ -891,13 +939,16 @@ h2.section-title:after {
 .card-item .card-author {
   display: flex;
   justify-content: space-around;
+
   margin: 30px 0;
 }
 .card-item .card-btn--date {
   position: absolute;
   bottom: 0;
   left: 50%;
+
   width: max-content;
+
   transform: translate(-50%, 50%);
 }
 </style>

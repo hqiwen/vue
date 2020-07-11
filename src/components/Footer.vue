@@ -75,31 +75,37 @@ export default {};
 <style>
 .footer-top {
   position: relative;
+
   display: flex;
-  padding: 30px;
   justify-content: center;
+
+  padding: 30px;
 }
 
 .footer-top::before {
   position: absolute;
-  content: "";
   bottom: 0;
   left: 0;
+
   width: 0;
   height: 0;
+
+  content: "";
   transform: translate(-100%);
-  border-color: transparent #04b4a4;
+
   border-width: 94px 40px 0 0;
   border-style: solid;
+  border-color: transparent #04b4a4;
 }
 .footer-top img {
   margin: 0 30px;
 }
 
 .footer-link {
-  background: #262229;
-  color: #fff;
   padding: 50px 0;
+
+  color: #fff;
+  background: #262229;
 }
 
 .footer-link h3 {
@@ -108,11 +114,14 @@ export default {};
 
 .footer-link h3::after {
   position: absolute;
-  left: 0;
   bottom: -20px;
-  height: 4px;
+  left: 0;
+
   width: 40px;
+  height: 4px;
+
   content: "";
+
   background: #00c9b7;
 }
 
@@ -145,44 +154,53 @@ export default {};
 }
 
 .footer-link li::before {
-  content: "\f101";
-  left: 0;
   top: 0;
-  font-family: Fontawesome;
+  left: 0;
+
   margin-right: 5px;
+
+  content: "\f101";
+
+  font-family: Fontawesome;
 }
 
 .contact-us .input-all {
   display: flex;
+
   margin-bottom: 30px;
 }
 
 .contact-us input {
   width: 100%;
-  background: #3d3c3e;
   height: 50px;
-  text-indent: 15px;
-  border-radius: 4px;
   margin-right: 10px;
   margin-bottom: 20px;
+
+  text-indent: 15px;
+
   color: #ffffff;
   border: none;
+  border-radius: 4px;
+  background: #3d3c3e;
 }
 
 .contact-us .send-message {
   width: 100%;
+
   border-radius: 0;
 }
 
 .contact-us textarea {
   width: 100%;
   height: 70px;
-  background: #3d3c3e;
-  text-indent: 15px;
-  padding-top: 10px;
   margin-bottom: 15px;
+  padding-top: 10px;
+
+  text-indent: 15px;
+
   color: #ffffff;
   border-radius: 4px;
+  background: #3d3c3e;
 }
 
 .footer-area .copyright {

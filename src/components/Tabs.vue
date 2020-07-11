@@ -99,55 +99,70 @@ export default {
 
 <style>
 .tabs {
-  font-size: 14px;
   color: #657180;
+
+  font-size: 14px;
 }
 .tabs-bar:after {
-  content: "";
   display: block;
+
   width: 100%;
   height: 1px;
-  background: #d7dde4;
   margin-top: -1px;
+
+  content: "";
+
+  background: #d7dde4;
 }
 .tabs-tab {
-  text-align: center;
+  position: relative;
+
   display: inline-block;
-  padding: 20px;
+
   width: 12%;
   margin-right: 6px;
-  background: #fff;
+  padding: 20px;
+
   cursor: pointer;
-  position: relative;
+  text-align: center;
+
+  background: #fff;
 }
 .tabs-tab-active {
   color: #fff;
   background: #00c9b7;
 }
 .tabs-tab-active:before {
-  content: "";
-  display: block;
-  height: 1px;
-  background: #3399ff;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+
+  display: block;
+
+  height: 1px;
+
+  content: "";
+
+  background: #39f;
 }
 .nav-icon {
-  height: 40px;
   width: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #fff;
-  background: #00c9b7;
-  border-radius: 50%;
+  height: 40px;
   margin: 0 auto;
+
   cursor: pointer;
+  text-align: center;
+
+  color: #fff;
+  border-radius: 50%;
+  background: #00c9b7;
+
+  line-height: 40px;
 }
 .tabs-tab-active .nav-icon {
-  background: #fff;
   color: #00c9b7;
+  background: #fff;
 }
 .tabs-content {
   padding: 8px 0;
