@@ -98,9 +98,6 @@ export default {
 </script>
 
 <style>
-.departments-nav {
-  display: flex;
-}
 .tabs {
   font-size: 14px;
   color: #657180;
