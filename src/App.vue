@@ -104,185 +104,177 @@
         </div>
       </div>
 
-      <div class="services gray-bg section-area">
-        <div class="container">
-          <div class="service-header section-header mb-30 mt-30">
-            <h2 class="services-title section-title mb-30">our services</h2>
+      <Section class="service gray-bg">
+        <template v-slot:header>
+          <h2 class="section-title">our services</h2>
+          <p>Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada</p>
+        </template>
+
+        <template v-slot:content>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title mb-5">Cardiology</h3>
             <p
-              class="services-content"
-            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada</p>
-          </div>
-
-          <div class="service-info">
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title .mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-            <el-card class="single-service-info">
-              <div class="info-icon">
-                <i class="fa fa-facebook"></i>
-              </div>
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-            </el-card>
-          </div>
-        </div>
-      </div>
-
-      <div class="expert-doctor section-area">
-        <div class="container">
-          <div class="section-header mb-30 mt-30">
-            <h2 class="doctor-title section-title mb-30">Our Expert Doctor</h2>
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title .mb-5">Cardiology</h3>
             <p
-              class="doctor-content pb-100"
-            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada</p>
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+          <el-card class="single-service-info section-item">
+            <div class="info-icon">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+          </el-card>
+        </template>
+      </Section>
+
+      <Section class="expert-doctor">
+        <template v-slot:header>
+          <h2 class="section-title">Our Expert Doctor</h2>
+          <p
+            class="doctor-content pb-100"
+          >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada</p>
+        </template>
+
+        <template v-slot:content>
+          <el-card class="single-doctor-info pt-100">
+            <div class="info-img">
+              <img src="./assets/images/1.png" alt />
+            </div>
+            <h3 class="info-title mb-5">Dr. Khaled Hossen</h3>
+            <p class="mb-30">Physical Medicine, MBBS</p>
+            <p
+              class="info-content mb-30"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+            <div class="team-social">
+              <a href class="facebook-bg">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href class="twitter-bg">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href class="google-plus-bg">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </div>
+          </el-card>
+
+          <el-card class="single-doctor-info pt-100">
+            <div class="info-img">
+              <img src="./assets/images/2.png" alt />
+            </div>
+
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+
+            <div class="team-social">
+              <a href class="facebook-bg">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href class="twitter-bg">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href class="google-plus-bg">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </div>
+          </el-card>
+
+          <el-card class="single-doctor-info pt-100">
+            <div class="info-img">
+              <img src="./assets/images/3.png" alt />
+            </div>
+
+            <h3 class="info-title mb-5">Cardiology</h3>
+            <p
+              class="info-content"
+            >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
+
+            <div class="team-social">
+              <a href class="facebook-bg">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href class="twitter-bg">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href class="google-plus-bg">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </div>
+          </el-card>
+        </template>
+      </Section>
+
+      <Section class="counter-area gray-bg">
+        <template v-slot:content>
+          <div class="single-counter">
+            <h3 class="count blue-bg" @click="showTotalStuff">
+              <Tween :changeValue="totalStuff" :duration="20" />
+            </h3>
+            <h5>Total Stuff</h5>
           </div>
-
-          <div class="doctor-info">
-            <el-card class="single-doctor-info pt-100">
-              <div class="info-img">
-                <img src="./assets/images/1.png" alt />
-              </div>
-              <h3 class="info-title mb-5">Dr. Khaled Hossen</h3>
-              <p class="mb-30">Physical Medicine, MBBS</p>
-              <p
-                class="info-content mb-30"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-              <div class="team-social">
-                <a href class="facebook-bg">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href class="twitter-bg">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href class="google-plus-bg">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </div>
-            </el-card>
-
-            <el-card class="single-doctor-info pt-100">
-              <div class="info-img">
-                <img src="./assets/images/2.png" alt />
-              </div>
-
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-
-              <div class="team-social">
-                <a href class="facebook-bg">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href class="twitter-bg">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href class="google-plus-bg">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </div>
-            </el-card>
-
-            <el-card class="single-doctor-info pt-100">
-              <div class="info-img">
-                <img src="./assets/images/3.png" alt />
-              </div>
-
-              <h3 class="info-title mb-5">Cardiology</h3>
-              <p
-                class="info-content"
-              >Lorem ipsum dolor sit amenuodales massa turpis cursus iaculis urna nam. Ultricies sapien fusce</p>
-
-              <div class="team-social">
-                <a href class="facebook-bg">
-                  <i class="fa fa-facebook"></i>
-                </a>
-                <a href class="twitter-bg">
-                  <i class="fa fa-twitter"></i>
-                </a>
-                <a href class="google-plus-bg">
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </div>
-            </el-card>
+          <div class="single-counter">
+            <h3 class="count blue-bg">
+              <Tween :changeValue="1576" />
+            </h3>
+            <h5>Total Stuff</h5>
           </div>
-        </div>
-      </div>
-
-      <div class="counter-area gray-bg section-area">
-        <div class="container">
-          <div class="all-counters">
-            <div class="single-counter">
-              <h3 class="count blue-bg" @click="showTotalStuff">
-                <Tween :changeValue="totalStuff" :duration="20" />
-              </h3>
-              <h5>Total Stuff</h5>
-            </div>
-            <div class="single-counter">
-              <h3 class="count blue-bg">
-                <Tween :changeValue="1576" />
-              </h3>
-              <h5>Total Stuff</h5>
-            </div>
-            <div class="single-counter">
-              <h3 class="count blue-bg">
-                <Tween :changeValue="2946" />
-              </h3>
-              <h5>Total Stuff</h5>
-            </div>
-            <div class="single-counter">
-              <h3 class="count blue-bg">
-                <Tween :changeValue="312" />
-              </h3>
-              <h5>Total Stuff</h5>
-            </div>
+          <div class="single-counter">
+            <h3 class="count blue-bg">
+              <Tween :changeValue="2946" />
+            </h3>
+            <h5>Total Stuff</h5>
           </div>
-        </div>
-      </div>
+          <div class="single-counter">
+            <h3 class="count blue-bg">
+              <Tween :changeValue="312" />
+            </h3>
+            <h5>Total Stuff</h5>
+          </div>
+        </template>
+      </Section>
 
       <div class="department-area section-area">
         <div class="container">
@@ -412,63 +404,60 @@
         </div>
       </div>
 
-      <div class="blog-area section-area">
-        <div class="container">
-          <div class="section-header mb-30 mt-30">
-            <h2 class="header-title section-title mb-30">Latest Update</h2>
+      <Section class="blog-area">
+        <template v-slot:header>
+          <h2 class="section-title">Latest Update</h2>
+          <p>Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
+        </template>
+
+        <template v-slot:content>
+          <el-card class="card-item">
+            <div class="card-img mb-30">
+              <img src="./assets/images/1.jpg" />
+              <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+            </div>s
+            <div class="card-author">
+              <span>By Admin</span>
+              <span>Doctor, Clinic</span>
+            </div>
+            <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
             <p
-              class="header-content"
-            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
-          </div>
-          <div class="blog-area cards">
-            <el-card class="blog-area card-item">
-              <div class="card-img mb-30">
-                <img src="./assets/images/1.jpg" />
-                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
-              </div>
-              <div class="card-author">
-                <span>By Admin</span>
-                <span>Doctor, Clinic</span>
-              </div>
-              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
-              <p
-                class="mb-30"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-              <Button white>READ MORE</Button>
-            </el-card>
-            <el-card class="blog-area card-item">
-              <div class="card-img mb-30">
-                <img src="./assets/images/1.jpg" />
-                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
-              </div>
-              <div class="card-author">
-                <span>By Admin</span>
-                <span>Doctor, Clinic</span>
-              </div>
-              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
-              <p
-                class="mb-30"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-              <Button white>READ MORE</Button>
-            </el-card>
-            <el-card class="blog-area card-item">
-              <div class="card-img mb-30">
-                <img src="./assets/images/1.jpg" />
-                <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
-              </div>
-              <div class="card-author">
-                <span>By Admin</span>
-                <span>Doctor, Clinic</span>
-              </div>
-              <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
-              <p
-                class="mb-30"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-              <Button white>READ MORE</Button>
-            </el-card>
-          </div>
-        </div>
-      </div>
+              class="mb-30"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <Button white>READ MORE</Button>
+          </el-card>
+          <el-card class="card-item">
+            <div class="card-img mb-30">
+              <img src="./assets/images/1.jpg" />
+              <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+            </div>
+            <div class="card-author">
+              <span>By Admin</span>
+              <span>Doctor, Clinic</span>
+            </div>
+            <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
+            <p
+              class="mb-30"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <Button white>READ MORE</Button>
+          </el-card>
+          <el-card class="card-item">
+            <div class="card-img mb-30">
+              <img src="./assets/images/1.jpg" />
+              <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
+            </div>
+            <div class="card-author">
+              <span>By Admin</span>
+              <span>Doctor, Clinic</span>
+            </div>
+            <h4 class="mb-30">Remember Outweigh Do He Desirous No Cheerful</h4>
+            <p
+              class="mb-30"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <Button white>READ MORE</Button>
+          </el-card>
+        </template>
+      </Section>
     </main>
 
     <Footer />
@@ -482,6 +471,7 @@ import Footer from "./components/Footer";
 import Tab from "./components/Tab";
 import Tabs from "./components/Tabs";
 import Tween from "./components/Tween";
+import Section from "./components/Section";
 
 export default {
   name: "App",
@@ -507,7 +497,8 @@ export default {
     Tween,
     Tabs,
     Tab,
-    Footer
+    Footer,
+    Section
   },
   methods: {
     onSubmit() {
@@ -762,20 +753,15 @@ h2.section-title:after {
 }
 
 /* service 区域开始 */
-.service-info {
-  display: flex;
-  flex-flow: wrap;
-}
-
-.service-info .single-service-info {
+.service .single-service-info {
   margin: 15px;
 }
 
-.info-title:hover {
+.service .info-title:hover {
   color: #00c9b7;
 }
 
-.service-info .info-icon {
+.service .info-icon {
   width: 70px;
   height: 70px;
   margin: 20px auto;
@@ -786,7 +772,7 @@ h2.section-title:after {
   line-height: 70px;
 }
 
-.service-info i {
+.service i {
   display: inline-block;
 
   width: 60px;
@@ -803,19 +789,10 @@ h2.section-title:after {
 }
 
 /* doctor 区域开始 */
-.doctor-info {
-  display: flex;
-  flex-flow: wrap;
-}
-
-.doctor-info .single-doctor-info {
+.expert-doctor .single-doctor-info {
   overflow: visible;
-
-  margin: 15px;
-}
-
-.single-doctor-info {
   position: relative;
+  margin: 15px;
 }
 
 .single-doctor-info .info-img {
@@ -844,14 +821,9 @@ h2.section-title:after {
 }
 
 /* counter区域 */
-.counter-area .all-counters {
-  display: flex;
-}
-
-.all-counters .single-counter {
+.counter-area .single-counter {
   flex: 1;
 }
-
 .counter-area .count {
   width: 150px;
   height: 125px;
@@ -909,11 +881,7 @@ h2.section-title:after {
 }
 
 /* blog 区域开始 */
-.blog-area.cards {
-  display: flex;
-}
-
-.blog-area.card-item {
+.blog-area .card-item {
   margin: 0 15px;
 }
 

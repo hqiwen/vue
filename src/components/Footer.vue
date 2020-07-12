@@ -2,11 +2,11 @@
   <footer class="footer-area">
     <div class="container">
       <div class="footer-top primary-bg">
-        <img src="./assets/images/1 (1).png" />
-        <img src="./assets/images/2 (1).png" />
-        <img src="./assets/images/1 (1).png" />
-        <img src="./assets/images/2 (1).png" />
-        <img src="./assets/images/1 (1).png" />
+        <img src="../assets/images/1 (1).png" />
+        <img src="../assets/images/2 (1).png" />
+        <img src="../assets/images/1 (1).png" />
+        <img src="../assets/images/2 (1).png" />
+        <img src="../assets/images/1 (1).png" />
       </div>
     </div>
 
