@@ -250,8 +250,8 @@
       <Section class="counter-area gray-bg">
         <template v-slot:content>
           <div class="single-counter">
-            <h3 class="count blue-bg" @click="showTotalStuff">
-              <Tween :changeValue="totalStuff" :duration="20" />
+            <h3 class="count blue-bg">
+              <Tween :changeValue="589" />
             </h3>
             <h5>Total Stuff</h5>
           </div>
@@ -365,14 +365,21 @@
         </template>
 
         <template v-slot:content>
-          <el-carousel
-            trigger="click"
-            height="150px"
-            indicator-position="none"
-            arrow="never"
-            :autoplay="false"
-          >
-            <el-carousel-item>
+          <el-carousel trigger="click" indicator-position="outside" arrow="never" :autoplay="false">
+            <el-carousel-item class>
+              <el-card>
+                <div
+                  class
+                >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                <div class="name">
+                  <div></div>
+                  <div>
+                    <h3>Mario Speedwage</h3>
+                    <span>bussinessman</span>
+                  </div>
+                </div>
+              </el-card>
+
               <el-card>
                 <div
                   class
@@ -387,6 +394,19 @@
               </el-card>
             </el-carousel-item>
             <el-carousel-item>
+              <el-card>
+                <div
+                  class
+                >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                <div class="name">
+                  <div></div>
+                  <div>
+                    <h3>Mario Speedwage</h3>
+                    <span>bussinessman</span>
+                  </div>
+                </div>
+              </el-card>
+
               <el-card>
                 <div
                   class
@@ -493,7 +513,6 @@ export default {
       rules: {
         phone: [{ min: 12, max: 12, message: "长度12 个字符", trigger: "blur" }]
       },
-      totalStuff: 589,
       value: "1"
     };
   },
@@ -509,12 +528,6 @@ export default {
   methods: {
     onSubmit() {
       console.log("submit");
-    },
-    showTotalStuff() {
-      this.$message({
-        type: "success",
-        message: "你的点击内容: " + this.totalStuff
-      });
     }
   }
 };

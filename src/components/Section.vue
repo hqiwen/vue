@@ -28,6 +28,8 @@ export default {};
 .department-area .section-header {
   display: flex;
   align-items: center;
+
+  width: 100%;
 }
 
 h2.section-title {

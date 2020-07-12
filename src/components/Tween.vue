@@ -1,5 +1,5 @@
 <template>
-  <div>{{value}}</div>
+  <div @click="showValue">{{value}}</div>
 </template>
 <script>
 /*
@@ -8,8 +8,15 @@
  * c: change in value（变化量）；
  * d: duration（持续时间）。
  */
+
+// eslint-disable-next-line
 function Linear(t, b, c, d) {
   return (c * t) / d + b;
+}
+
+function EaseInOut(t, b, c, d) {
+  if ((t /= d / 2) < 1) return (c / 2) * t * t + b;
+  return (-c / 2) * (--t * (t - 2) - 1) + b;
 }
 
 function isInViewPortOfOne(el) {
@@ -35,7 +42,7 @@ export default {
     },
     duration: {
       type: Number,
-      default: 10
+      default: 100
     }
   },
   data() {
@@ -49,7 +56,7 @@ export default {
     step() {
       // value就是当前的位置值
       let nextValue = Math.round(
-        Linear(
+        EaseInOut(
           this.currentTime,
           this.beginningValue,
           this.changeValue,
@@ -63,15 +70,16 @@ export default {
       }
     },
     handleScroll() {
-      if (this.once) {
-        return;
-      } else {
-        if (isInViewPortOfOne(this.$el)) {
-          console.log("move");
-          this.step();
-          this.once = true;
-        }
+      if (!this.once && isInViewPortOfOne(this.$el)) {
+        this.once = true;
+        this.step();
       }
+    },
+    showValue() {
+      this.$message({
+        type: "success",
+        message: "你的点击内容: " + this.value
+      });
     }
   },
   mounted() {

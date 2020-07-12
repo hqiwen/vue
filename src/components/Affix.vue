@@ -70,7 +70,8 @@ export default {
         this.styles = {
           top: `${this.offsets}px`,
           left: `${elementOffset.left}px`,
-          width: `${this.$el.offsetWidth}px`
+          width: `${this.$el.offsetWidth}px`,
+          zIndex: 2
         };
         this.onAffix(this.affixed);
       }
