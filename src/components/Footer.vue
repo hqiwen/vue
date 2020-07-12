@@ -1,7 +1,7 @@
 <template>
   <footer class="footer-area">
-    <div class="container">
-      <div class="footer-top primary-bg">
+    <div class="footer-top primary-bg">
+      <div class="container">
         <img src="../assets/images/1 (1).png" />
         <img src="../assets/images/2 (1).png" />
         <img src="../assets/images/1 (1).png" />
@@ -12,8 +12,8 @@
 
     <div class="footer-link">
       <div class="container justify-content-start">
-        <div class="acout-company">
-          <h3>acout-company</h3>
+        <div class="about-company">
+          <h3>about-company</h3>
           <p>Penatibus in, litora dictumst suspendamuanim egestas, libero mollis molestiae sit et sem nisl inquam vitae euismoellentesque. Iaculpellus est officia. Non sed id mollis molestie ut ut mi qelibero donec and this is over head</p>
         </div>
         <div class="useful-link">
@@ -77,6 +77,7 @@ export default {};
   position: relative;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   padding: 30px;
@@ -133,7 +134,7 @@ export default {};
   margin-right: 10px;
 }
 
-.acout-company {
+.about-company {
   flex: 2;
 }
 
@@ -162,6 +163,10 @@ export default {};
   content: "\f101";
 
   font-family: Fontawesome;
+}
+
+.contact-us {
+  width: 100%;
 }
 
 .contact-us .input-all {
@@ -205,5 +210,15 @@ export default {};
 
 .footer-area .copyright {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-link .justify-content-start {
+    flex-direction: column;
+  }
 }
 </style>

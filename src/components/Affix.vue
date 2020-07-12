@@ -87,7 +87,9 @@ export default {
       }
       if (this.affixed && scrollTop < elementOffset.top) {
         this.affixed = false;
-        this.styles = {};
+        this.styles = {
+          width: `${this.$el.offsetWidth}px`
+        };
         this.onAffix(this.affixed);
       }
       if (this.affixed && this.boundary) {

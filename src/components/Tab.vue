@@ -50,4 +50,14 @@ export default {
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .pane {
+    flex-direction: column;
+  }
+
+  .pane img {
+    width: 100%;
+  }
+}
 </style>

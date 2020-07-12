@@ -169,13 +169,13 @@ export default {
   flex-flow: row;
 }
 
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 768px) {
   .verticalMenu.justify-content-end {
     display: none;
   }
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .horizontalMenu.justify-content-end {
     display: none;
   }

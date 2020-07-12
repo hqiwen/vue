@@ -25,6 +25,11 @@ export default {};
   margin: 30px auto;
 }
 
+.department-area .section-header {
+  display: flex;
+  align-items: center;
+}
+
 h2.section-title {
   margin-bottom: 30px;
 }
@@ -51,21 +56,21 @@ h2.section-title:after {
   flex-wrap: wrap;
 }
 
-.expert-doctor .section-content {
-  /* flex-wrap: wrap; */
-}
-
 .service .section-item {
   width: 30%;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .section-content {
     flex-direction: column;
   }
 
   .service .section-item {
     width: 100%;
+  }
+
+  .department-area .section-header {
+    flex-direction: column;
   }
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Header />
+    <Header id="top" />
 
     <main>
       <div class="single-hero">
         <div class="container relative">
           <el-row class="pb-70">
-            <el-col>
+            <el-col :span="14" :xs="24">
               <h1 class="hero title mb-30">Meet with you best Doctor here</h1>
               <p
                 class="hero description mb-30"
@@ -17,7 +17,7 @@
               </div>
             </el-col>
           </el-row>
-          <el-row class="hero-widgets">
+          <el-row class="hero-widgets sm--0">
             <el-col class="card primary-bg-dark">
               <div class="widgets-icon">
                 <i class="fa fa-facebook"></i>
@@ -52,7 +52,7 @@
       <div class="book-appointment">
         <div class="container">
           <el-row style="display: flex; align-items:center; padding-top: 70px;">
-            <el-col class="book-img">
+            <el-col class="book-img sm--0">
               <img src="./assets/images/doctor.png" />
             </el-col>
             <el-col>
@@ -276,14 +276,15 @@
         </template>
       </Section>
 
-      <div class="department-area section-area">
-        <div class="container">
-          <div class="department-header mb-30 mt-30">
-            <h2 class="header-title mb-30">Our Departments is best for you</h2>
-            <p
-              class="header-content"
-            >Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
-          </div>
+      <Section class="department-area">
+        <template v-slot:header>
+          <h2 class="header-title">Our Departments is best for you</h2>
+          <p
+            class="header-content"
+          >Lorem ipsum dolor sit amet, nunc sodales massa turpis cursus iaculis, ur nam. Ultricies sapien fusce vitae duis, ut torquent a. Pede nec libero tristique, eget fusce, quis lorem vel tortor lacinia amet.</p>
+        </template>
+
+        <template v-slot:content>
           <Tabs v-model="value">
             <Tab label="dental" icon="fa fa-facebook" name="1">
               <div>
@@ -340,11 +341,11 @@
               </div>
             </Tab>
           </Tabs>
-        </div>
-      </div>
+        </template>
+      </Section>
 
-      <div class="call-to-action primary-bg section-area">
-        <div class="container clearfix">
+      <Section class="call-to-action primary-bg">
+        <template v-slot:content>
           <div class="action-description">
             <h3 class="mb-30">30% off any diganestic let's check</h3>
             <p>You can get upto 30% off for 45 days in here ! So Contact with Us</p>
@@ -352,57 +353,56 @@
           <div class="action-btn">
             <Button class="get-service-btn" white>GET SERVICE</Button>
           </div>
-        </div>
-      </div>
+        </template>
+      </Section>
 
-      <div class="client-testimonial section-area">
-        <div class="container">
-          <div class="section-header mb-30 mt-30">
-            <h2 class="header-title section-title mb-30">client testimonial</h2>
-            <p
-              class="header-content"
-            >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
-          </div>
-          <div class>
-            <el-carousel
-              trigger="click"
-              height="150px"
-              indicator-position="none"
-              arrow="never"
-              :autoplay="false"
-            >
-              <el-carousel-item>
-                <el-card>
-                  <div
-                    class
-                  >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                  <div class="name">
-                    <div></div>
-                    <div>
-                      <h3>Mario Speedwage</h3>
-                      <span>bussinessman</span>
-                    </div>
+      <Section class="client-testimonial">
+        <template v-slot:header>
+          <h2 class="section-title">client testimonial</h2>
+          <p
+            class="header-content"
+          >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
+        </template>
+
+        <template v-slot:content>
+          <el-carousel
+            trigger="click"
+            height="150px"
+            indicator-position="none"
+            arrow="never"
+            :autoplay="false"
+          >
+            <el-carousel-item>
+              <el-card>
+                <div
+                  class
+                >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                <div class="name">
+                  <div></div>
+                  <div>
+                    <h3>Mario Speedwage</h3>
+                    <span>bussinessman</span>
                   </div>
-                </el-card>
-              </el-carousel-item>
-              <el-carousel-item>
-                <el-card>
-                  <div
-                    class
-                  >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                  <div class="name">
-                    <div></div>
-                    <div>
-                      <h3>Mario Speedwage</h3>
-                      <span>bussinessman</span>
-                    </div>
+                </div>
+              </el-card>
+            </el-carousel-item>
+            <el-carousel-item>
+              <el-card>
+                <div
+                  class
+                >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
+                <div class="name">
+                  <div></div>
+                  <div>
+                    <h3>Mario Speedwage</h3>
+                    <span>bussinessman</span>
                   </div>
-                </el-card>
-              </el-carousel-item>
-            </el-carousel>
-          </div>
-        </div>
-      </div>
+                </div>
+              </el-card>
+            </el-carousel-item>
+          </el-carousel>
+        </template>
+      </Section>
 
       <Section class="blog-area">
         <template v-slot:header>
@@ -415,7 +415,7 @@
             <div class="card-img mb-30">
               <img src="./assets/images/1.jpg" />
               <Button class="card-btn--date" :hover="false">01 JULY 2019</Button>
-            </div>s
+            </div>
             <div class="card-author">
               <span>By Admin</span>
               <span>Doctor, Clinic</span>
@@ -461,6 +461,12 @@
     </main>
 
     <Footer />
+
+    <div class="back-to-top">
+      <a href="#top">
+        <i class="fa fa-angle-up"></i>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -515,165 +521,7 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-
-  border: none;
-  outline: none;
-}
-
-body {
-  color: #292929;
-  background: #ffffff;
-
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7em;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-}
-
-a {
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.justify-content-start {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.justify-content-end {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.primary-bg {
-  background: #00c9b7;
-}
-.primary-bg-dark {
-  background: #03afa0;
-}
-.gray-bg {
-  background: #f9f9f9;
-}
-.blue-bg {
-  background: #15124b;
-}
-
-.btn--mid {
-  position: relative;
-
-  display: inline-block;
-
-  padding: 14px 45px;
-
-  cursor: pointer;
-  transition: 0.4s;
-  text-transform: uppercase;
-
-  border-radius: 50px;
-
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.btn--fill {
-  color: #ffffff;
-  background: #00c9b7;
-}
-
-.mr-20 {
-  margin-right: 20px;
-}
-
-.mb-5 {
-  margin-bottom: 5px;
-}
-
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-.mt-70 {
-  margin-top: 70px;
-}
-
-.pb-70 {
-  padding-bottom: 70px;
-}
-
-.pb-100 {
-  padding-bottom: 100px;
-}
-
-.pt-100 {
-  padding-top: 100px;
-}
-
-.relative {
-  position: relative;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-
-  margin: 0px;
-
-  background: none;
-
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  line-height: 1.2em;
-}
-
-h2 {
-  color: #292929;
-
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.6em;
-}
-
-ul li {
-  list-style: none;
-}
-
-.clearfix::after {
-  display: block;
-  clear: both;
-
-  height: 0;
-
-  content: "\20";
-}
-
+/* hero 区域开始 */
 .single-hero {
   background: url("assets/images/hero.jpg") no-repeat center / 100% 100%;
 }
@@ -707,7 +555,7 @@ ul li {
 
   display: flex;
 
-  width: 80%;
+  width: 100%;
   padding: 0 15px;
 
   transform: translate(-50%, 50%);
@@ -717,6 +565,7 @@ ul li {
   width: 10%;
 }
 
+/* book 区域开始 */
 .book-card h2 {
   text-align: center;
 
@@ -725,31 +574,6 @@ ul li {
 
 .book-img img {
   width: 100%;
-}
-
-.section-area {
-  padding: 100px 0;
-
-  text-align: center;
-}
-
-.section-header {
-  width: 60%;
-  margin: 0 auto;
-}
-
-h2.section-title:after {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-
-  width: 40px;
-  height: 4px;
-
-  content: "";
-  transform: translate(-50%, 0);
-
-  background: #00c9b7;
 }
 
 /* service 区域开始 */
@@ -790,8 +614,10 @@ h2.section-title:after {
 
 /* doctor 区域开始 */
 .expert-doctor .single-doctor-info {
-  overflow: visible;
   position: relative;
+
+  overflow: visible;
+
   margin: 15px;
 }
 
@@ -840,12 +666,7 @@ h2.section-title:after {
 }
 
 /* department 区域开始 */
-.department-header {
-  display: flex;
-  align-items: center;
-}
-
-.department-header .header-title {
+.department-area .header-title {
   flex: 2;
 
   padding-right: 10px;
@@ -853,7 +674,7 @@ h2.section-title:after {
   border-right: 5px solid #00c9b7;
 }
 
-.department-header .header-content {
+.department-area .header-content {
   flex: 3;
 
   padding: 10px;
@@ -918,5 +739,34 @@ h2.section-title:after {
   width: max-content;
 
   transform: translate(-50%, 50%);
+}
+
+@media screen and (max-width: 768px) {
+  .service .single-service-info {
+    margin: 15px 0;
+  }
+
+  .sm--0 {
+    display: none;
+  }
+}
+
+.back-to-top a {
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  bottom: 30px;
+
+  width: 35px;
+  height: 35px;
+
+  text-align: center;
+
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #00c9b7;
+
+  font-size: 14px;
+  line-height: 35px;
 }
 </style>
