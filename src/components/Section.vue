@@ -54,6 +54,10 @@ h2.section-title:after {
   display: flex;
 }
 
+.call-to-action .section-content {
+  justify-content: space-around;
+}
+
 .service .section-content {
   flex-wrap: wrap;
 }

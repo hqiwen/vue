@@ -365,14 +365,22 @@
         </template>
 
         <template v-slot:content>
-          <el-carousel trigger="click" indicator-position="outside" arrow="never" :autoplay="false">
-            <el-carousel-item class>
+          <el-carousel
+            class="client-testimonial--container"
+            trigger="click"
+            indicator-position="outside"
+            arrow="never"
+            :autoplay="false"
+          >
+            <el-carousel-item class="client-testimonial--item">
               <el-card>
                 <div
-                  class
+                  class="mb-30"
                 >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                <div class="name">
-                  <div></div>
+                <div class="justify-content-start">
+                  <div class="mr-20">
+                    <img src="./assets/images/reviwer.png" />
+                  </div>
                   <div>
                     <h3>Mario Speedwage</h3>
                     <span>bussinessman</span>
@@ -382,10 +390,12 @@
 
               <el-card>
                 <div
-                  class
+                  class="mb-30"
                 >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                <div class="name">
-                  <div></div>
+                <div class="justify-content-start">
+                  <div class="mr-20">
+                    <img src="./assets/images/reviwer.png" />
+                  </div>
                   <div>
                     <h3>Mario Speedwage</h3>
                     <span>bussinessman</span>
@@ -393,13 +403,15 @@
                 </div>
               </el-card>
             </el-carousel-item>
-            <el-carousel-item>
+            <el-carousel-item class="client-testimonial--item">
               <el-card>
                 <div
-                  class
+                  class="mb-30"
                 >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                <div class="name">
-                  <div></div>
+                <div class="justify-content-start">
+                  <div class="mr-20">
+                    <img src="./assets/images/reviwer.png" />
+                  </div>
                   <div>
                     <h3>Mario Speedwage</h3>
                     <span>bussinessman</span>
@@ -409,10 +421,12 @@
 
               <el-card>
                 <div
-                  class
+                  class="mb-30"
                 >Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed.</div>
-                <div class="name">
-                  <div></div>
+                <div class="justify-content-start">
+                  <div class="mr-20">
+                    <img src="./assets/images/reviwer.png" />
+                  </div>
                   <div>
                     <h3>Mario Speedwage</h3>
                     <span>bussinessman</span>
@@ -421,6 +435,84 @@
               </el-card>
             </el-carousel-item>
           </el-carousel>
+        </template>
+      </Section>
+
+      <Section class="price-area gray-bg">
+        <template v-slot:header>
+          <h2 class="section-title">Choose Pricing Plan</h2>
+          <p
+            class="header-content"
+          >Condimentum rutrum placerat egestas condimentum mi eros. Eleifend cras quirntum Feugiat elit placerat. Diam tempor malesuada.</p>
+        </template>
+
+        <template v-slot:content>
+          <el-card>
+            <div class="price-header">
+              <h4>Basic</h4>
+              <h3>
+                $57
+                <span>month</span>
+              </h3>
+            </div>
+            <div class="price-body">
+              <ul>
+                <li
+                  class="department-list-item"
+                >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                <li class="department-list-item">Full Blood Examination.</li>
+                <li
+                  class="department-list-item"
+                >TSH (Thyroid Stimulating Hormone) Quantification Urinalysis.</li>
+                <li class="department-list-item">INR (International Normalized Ratio)</li>
+              </ul>
+              <Button class="buy-btn" white>BUY NOW</Button>
+            </div>
+          </el-card>
+          <el-card>
+            <div class="price-header">
+              <h4>Basic</h4>
+              <h3>
+                $57
+                <span>month</span>
+              </h3>
+            </div>
+            <div class="price-body">
+              <ul>
+                <li
+                  class="department-list-item"
+                >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                <li class="department-list-item">Full Blood Examination.</li>
+                <li
+                  class="department-list-item"
+                >TSH (Thyroid Stimulating Hormone) Quantification Urinalysis.</li>
+                <li class="department-list-item">INR (International Normalized Ratio)</li>
+              </ul>
+              <Button class="buy-btn" white>BUY NOW</Button>
+            </div>
+          </el-card>
+          <el-card>
+            <div class="price-header">
+              <h4>Basic</h4>
+              <h3>
+                $57
+                <span>month</span>
+              </h3>
+            </div>
+            <div class="price-body">
+              <ul>
+                <li
+                  class="department-list-item"
+                >Liver Function Tests. The Liver Function Tests (LFT)ed</li>
+                <li class="department-list-item">Full Blood Examination.</li>
+                <li
+                  class="department-list-item"
+                >TSH (Thyroid Stimulating Hormone) Quantification Urinalysis.</li>
+                <li class="department-list-item">INR (International Normalized Ratio)</li>
+              </ul>
+              <Button class="buy-btn" white>BUY NOW</Button>
+            </div>
+          </el-card>
         </template>
       </Section>
 
@@ -712,6 +804,50 @@ export default {
 /* call-to-action 区域 */
 .action-description {
   color: #fff;
+}
+
+/* client-testimonial 区域 */
+.client-testimonial--container {
+  width: 100%;
+}
+
+.client-testimonial--item {
+  display: flex;
+}
+
+.client-testimonial--item .el-card {
+  margin: 0 15px;
+}
+
+/* price 区域 */
+.price-area .price-header {
+  position: relative;
+  color: white;
+  padding: 40px 0;
+}
+
+.price-area .price-body {
+  padding: 40px 0;
+}
+
+.price-area .price-body ul {
+  text-align: left;
+}
+
+.price-area .price-header::before {
+  position: absolute;
+  content: "";
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #00c9b7;
+  border-radius: 0 0 50% 50%/ 30% 30%;
+  transform: scaleX(1.1);
+}
+
+.price-area .el-card {
+  margin: 0 15px;
 }
 
 /* blog 区域开始 */
